@@ -1,0 +1,21 @@
+/* V3 feedback: isolated styles preserve the V2 page. */
+[hidden]{display:none!important}
+.feedback-launch{position:fixed;right:24px;bottom:24px;z-index:30;display:flex;align-items:center;gap:14px;padding:13px 20px;border:1px solid #d6e0d3;border-radius:30px;background:var(--green);color:var(--paper);box-shadow:0 5px 22px #163d3320;font:500 .9375rem var(--sans);cursor:pointer}
+.feedback-launch:hover{background:#123e34}.feedback-launch>span{font-size:1.25rem}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #537d63;outline-offset:3px}
+#feedback-dialog{box-sizing:border-box;width:min(580px,calc(100% - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:28px 32px 20px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);overflow:auto;overscroll-behavior:contain;box-shadow:0 25px 100px #12241e40}
+#feedback-dialog::backdrop{background:#182e2666;backdrop-filter:blur(3px)}
+.feedback-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}.feedback-heading .eyebrow{font-size:.75rem;letter-spacing:.06em}
+.feedback-close{display:grid;place-items:center;flex-shrink:0;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font:1.6rem var(--sans);cursor:pointer}.feedback-close:hover{background:#e9ece2}
+#feedback-title{margin:14px 0 12px;font-size:2rem;font-weight:550;line-height:1.3;letter-spacing:-.03em}#feedback-title>span{color:var(--green)}#feedback-intro{font-size:1rem;color:var(--muted);line-height:1.75}
+.feedback-privacy{margin-top:16px;padding-left:12px;border-left:2px solid #9cb4a1;color:var(--muted);font-size:.875rem;line-height:1.7}
+#feedback-status:not(:empty){padding:12px 14px;margin-top:16px;border:1px solid #bbcbbb;border-radius:4px;background:#eaf0e6;font-size:.9375rem;overflow-wrap:anywhere}#feedback-status[data-tone="error"]{background:#f6ece5;border-color:#d6b39e;color:#793e28}
+#feedback-form{margin-top:20px}#feedback-fields{border:0;padding:0;margin:0;min-width:0}#feedback-form label{display:block;font-size:.875rem;font-weight:550;margin-bottom:7px}.optional{color:var(--muted);font-weight:400;margin-left:6px;font-size:.8125rem}
+#feedback-form input,#feedback-form select,#feedback-form textarea{width:100%;min-width:0;box-sizing:border-box;border:1px solid #b5beb1;border-radius:4px;background:#fffdf9;color:var(--ink);font:1rem var(--sans);padding:11px 12px;line-height:1.45}#feedback-form textarea{resize:vertical;min-height:116px}#feedback-form input::placeholder,#feedback-form textarea::placeholder{color:#6b746d}
+.feedback-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:17px 0}.feedback-hints{display:flex;justify-content:space-between;gap:12px;font-size:.75rem;line-height:1.6;color:var(--muted);margin:7px 0 18px}#feedback-count{white-space:nowrap}
+.feedback-submit{width:100%;border:0;font:500 1rem var(--sans);cursor:pointer;min-height:48px}#feedback-fields:disabled .feedback-submit{cursor:not-allowed;opacity:.55}#feedback-fields:disabled input,#feedback-fields:disabled select,#feedback-fields:disabled textarea{opacity:.7}
+.feedback-version{margin-top:16px;font-size:.75rem;text-align:center;color:var(--muted)}#feedback-success{margin-top:22px;font-size:1rem}#feedback-success button{margin-top:16px;color:var(--green);background:none;border:0;border-bottom:1px solid var(--green);padding:6px 0;font:1rem var(--sans);cursor:pointer}.feedback-noscript{padding-block:16px;font-size:.875rem}
+.site-footer{padding-bottom:80px}
+@media(max-width:600px){.feedback-launch{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));padding:12px 18px}#feedback-dialog{padding:20px;width:calc(100% - 24px);max-height:calc(100dvh - 24px)}#feedback-title{font-size:1.65rem}.feedback-heading .eyebrow{font-size:.6875rem}.feedback-row{gap:12px}.feedback-hints{flex-wrap:wrap;gap:4px}.feedback-hints>span:first-child{flex:1;min-width:190px}}
+@media(max-width:350px){.feedback-row{grid-template-columns:1fr}.feedback-heading .eyebrow{max-width:160px}}
+@media print{.feedback-launch,#feedback-dialog,.feedback-noscript{display:none!important}.site-footer{padding-bottom:0}}
