@@ -61,7 +61,7 @@
     const payload = {
       name: String(data.get('name') || '').trim() || null,
       relation: data.get('relation'), device: data.get('device'),
-      message: message.value.trim(), version: 'V3'
+      message: message.value.trim(), version: 'V4'
     };
     const nextSignature = JSON.stringify(payload);
     if (!requestId || signature !== nextSignature) {
